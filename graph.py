@@ -31,3 +31,12 @@ class Graph:
             if self.vertices[i].name == vertex_name:
                 return i
         return UNDEFINED
+
+    def get_weight(self, vertex_1: int, vertex_2: int):
+        """Get the cost of the path from vertex 1 to vertex 2"""
+        for edge in self.edges:
+            if (edge.source_vertex == self.vertices[vertex_1] and edge.destination_vertex == self.vertices[
+                vertex_2]) or (
+                    edge.source_vertex == self.vertices[vertex_2] and edge.destination_vertex == self.vertices[
+                vertex_1]):
+                return edge.cost
