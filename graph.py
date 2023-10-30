@@ -83,4 +83,5 @@ class Graph:
         print("The shortest path is: ")
         print(self.vertices[source].name, end="")
         for i in reversed(range(count)):
-            print(" --> {}".format(path[i]))
+            print(" --> {}".format(path[i]), end="")
+        print(".")
