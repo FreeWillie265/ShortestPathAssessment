@@ -1,5 +1,5 @@
 from vertex import Vertex
-import edge as Edge
+from edge import Edge
 from helpers import UNDEFINED, INFINITY
 
 
@@ -11,8 +11,8 @@ class Graph:
     def add_vertex(self, vertex_name):
         self.vertices.append(Vertex(vertex_name))
 
-    def add_edge(self, edge: Edge):
-        self.edges.append(edge)
+    def add_edge(self, source_index, dest_index, cost):
+        self.edges.append(Edge(source_index, dest_index, cost))
 
     def is_adjacent(self, vertex_1: int, vertex_2: int):
         """Check if two vertices are adjacent to each other.
