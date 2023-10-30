@@ -51,3 +51,21 @@ class Graph:
                 index = i
         return index
 
+    def dijkstras_algorithm(self, source_index):
+        if source_index == UNDEFINED:
+            return
+
+        self.vertices[source_index].path_length = 0
+
+        while True:
+            current = self.min_cost_vertex_index()
+            if current == UNDEFINED:
+                return
+
+            self.vertices[current].processed = True
+
+            for i in range(len(self.vertices)):
+                if self.is_adjacent(current, i) and not self.vertices[i].processed:
+                    if self.vertices[current].path_length + self.get_weight(current, i) < self.vertices[i].path_lenght:
+                        self.vertices[i].path_length = self.vertices[i].path_length + self.get_weight(current, i)
+                        self.vertices[i].predecessor = current
