@@ -68,7 +68,7 @@ class Graph:
 
             for i in range(len(self.vertices)):
                 if self.is_adjacent(current, i) and not self.vertices[i].processed:
-                    if self.vertices[current].path_length + self.get_weight(current, i) < self.vertices[i].path_lenght:
+                    if self.vertices[current].path_length + self.get_weight(current, i) < self.vertices[i].path_length:
                         self.vertices[i].path_length = self.vertices[i].path_length + self.get_weight(current, i)
                         self.vertices[i].predecessor = current
 
