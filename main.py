@@ -15,32 +15,32 @@ def add_vertices(graph: Graph):
 
 def add_edges(graph: Graph):
     # Mchinji
-    graph.add_edge(0, 1, 1)
-    graph.add_edge(0, 6, 1)
+    graph.add_edge(0, 1, 141)
+    graph.add_edge(0, 6, 109)
 
     # Kasungu
-    graph.add_edge(1, 2, 1)
-    graph.add_edge(1, 4, 1)
+    graph.add_edge(1, 2, 66)
+    graph.add_edge(1, 4, 117)
 
     # Ntchisi
-    graph.add_edge(2, 4, 1)
-    graph.add_edge(2, 3, 1)
+    graph.add_edge(2, 4, 38)
+    graph.add_edge(2, 3, 66)
 
     # Nkhotakota
-    graph.add_edge(3, 5, 1)
+    graph.add_edge(3, 5, 112)
 
     # Dowa
-    graph.add_edge(4, 5, 1)
-    graph.add_edge(4, 6, 1)
+    graph.add_edge(4, 5, 67)
+    graph.add_edge(4, 6, 55)
 
     # Salima
-    graph.add_edge(5, 7, 1)
+    graph.add_edge(5, 7, 96)
 
     # Lilongwe
-    graph.add_edge(6, 7, 1)
+    graph.add_edge(6, 7, 92)
 
     # Dedza
-    graph.add_edge(7, 8, 1)
+    graph.add_edge(7, 8, 74)
 
     # Ntcheu's edge has already been defined at Dedza
 
@@ -64,4 +64,4 @@ if __name__ == '__main__':
         graph.execute(source, destination)
 
         exit_program = input("Re-Try? \n "
-                             "1 for yes, any other character to exit")
+                             "1 for yes, any other character to exit: ")
