@@ -12,7 +12,9 @@ class Graph:
         self.vertices.append(Vertex(vertex_name))
 
     def add_edge(self, source_index, dest_index, cost):
-        self.edges.append(Edge(source_index, dest_index, cost))
+        source_vertex = self.vertices[source_index]
+        dest_vertex = self.vertices[dest_index]
+        self.edges.append(Edge(source_vertex, dest_vertex, cost))
 
     def is_adjacent(self, vertex_1: int, vertex_2: int):
         """Check if two vertices are adjacent to each other.
