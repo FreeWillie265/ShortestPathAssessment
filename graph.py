@@ -82,7 +82,8 @@ class Graph:
             dest = predecessor
             count = count + 1
 
-        print("The shortest path is: ")
+        print("\n"
+              "The shortest path is: ")
         print(self.vertices[source].name, end="")
         for i in reversed(range(count)):
             print(" --> {}".format(path[i]), end="")

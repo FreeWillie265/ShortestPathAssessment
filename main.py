@@ -63,5 +63,6 @@ if __name__ == '__main__':
 
         graph.execute(source, destination)
 
-        exit_program = input("Re-Try? \n "
+        exit_program = input("\n"
+                             "Re-Try? \n "
                              "1 for yes, any other character to exit: ")
