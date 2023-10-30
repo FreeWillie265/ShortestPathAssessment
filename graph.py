@@ -1,4 +1,4 @@
-import vertex as Vertex
+
 import edge as Edge
 from helpers import UNDEFINED, INFINITY
 
@@ -8,8 +8,8 @@ class Graph:
         self.edges = []
         self.vertices = []
 
-    def add_vertex(self, vertex: Vertex):
-        self.vertices.append(vertex)
+    def add_vertex(self, vertex_name):
+        self.vertices.append(vertex_name)
 
     def add_edge(self, edge: Edge):
         self.edges.append(edge)
