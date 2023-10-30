@@ -1,5 +1,4 @@
-INFINITY = 9999999
-UNDEFINED = -1
+from helpers import INFINITY, UNDEFINED
 
 
 class Vertex:
