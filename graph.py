@@ -85,3 +85,15 @@ class Graph:
         for i in reversed(range(count)):
             print(" --> {}".format(path[i]), end="")
         print(".")
+
+    def execute(self, source_name, dest_name):
+        source_index = self.get_vertex_index(source_name)
+        dest_index = self.get_vertex_index(dest_name)
+
+        if source_index == UNDEFINED:
+            print("Source vertex not found")
+            return
+
+        if dest_index == UNDEFINED:
+            print("Destination vertex not found")
+            return
