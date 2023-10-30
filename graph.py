@@ -1,6 +1,6 @@
 import vertex as Vertex
 import edge as Edge
-from helpers import UNDEFINED
+from helpers import UNDEFINED, INFINITY
 
 
 class Graph:
@@ -40,3 +40,14 @@ class Graph:
                     edge.source_vertex == self.vertices[vertex_2] and edge.destination_vertex == self.vertices[
                 vertex_1]):
                 return edge.cost
+
+    def min_cost_vertex_index(self):
+        min_cost = INFINITY
+        index = UNDEFINED
+
+        for i in range(len(self.vertices)):
+            if not self.vertices[i].processed and self.vertices[i].path_length < min_cost:
+                min_cost = self.vertices[i].path_length
+                index = i
+        return index
+
