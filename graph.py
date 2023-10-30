@@ -69,3 +69,18 @@ class Graph:
                     if self.vertices[current].path_length + self.get_weight(current, i) < self.vertices[i].path_lenght:
                         self.vertices[i].path_length = self.vertices[i].path_length + self.get_weight(current, i)
                         self.vertices[i].predecessor = current
+
+    def print_shortest_path(self, source: int, dest: int):
+        path = []
+        count = 0
+
+        while source != dest:
+            path.append(self.vertices[dest].name)
+            predecessor = self.vertices[dest].predecessor
+            dest = predecessor
+            count = count + 1
+
+        print("The shortest path is: ")
+        print(self.vertices[source].name, end="")
+        for i in reversed(range(count)):
+            print(" --> {}".format(path[i]))
