@@ -1,5 +1,6 @@
 import vertex as Vertex
 import edge as Edge
+from helpers import UNDEFINED
 
 
 class Graph:
@@ -18,6 +19,15 @@ class Graph:
         i.e. You can find an edge where the source is vertex 1
          and the destination is vertex two or vice versa"""
         for edge in self.edges:
-            if (edge.source_vertex == self.vertices[vertex_1] and edge.destination_vertex == self.vertices[vertex_2]) or (edge.source_vertex == self.vertices[vertex_2] and edge.destination_vertex == self.vertices[vertex_1]):
+            if (edge.source_vertex == self.vertices[vertex_1] and edge.destination_vertex == self.vertices[
+                vertex_2]) or (
+                    edge.source_vertex == self.vertices[vertex_2] and edge.destination_vertex == self.vertices[
+                vertex_1]):
                 return True
         return False
+
+    def get_vertex_index(self, vertex_name):
+        for i in range(len(self.vertices)):
+            if self.vertices[i].name == vertex_name:
+                return i
+        return UNDEFINED
