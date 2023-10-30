@@ -97,3 +97,6 @@ class Graph:
         if dest_index == UNDEFINED:
             print("Destination vertex not found")
             return
+
+        self.dijkstras_algorithm(source_index)
+        self.print_shortest_path(source_index, dest_index)
